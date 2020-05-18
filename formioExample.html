@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="font-awesome.min.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="formio.full.min.css">
+    <script src="formio.full.js"></script>
+    <script type="text/javascript">
+      window.onload = function() {
+        Formio.icons = 'fontawesome';
+        Formio.createForm(document.getElementById('formio'), 'http://127.0.0.1:3001/trc01');
+      };
+    </script>
+  </head>
+  <body>
+  <div style="width:600px; margin-left:100px;">
+    <div id="formio"></div>
+  </div>
+  </body>
+</html>
