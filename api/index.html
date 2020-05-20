@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="font-awesome.min.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="formio.full.min.css">
+    <script src="formio.full.js"></script>
+    <script src="pako.js"></script>
+    <script type="text/javascript">
+    console.log("LOAD tramite.json");
+    var actual_JSON ;
+    loadJSON(function(response) {
+      // Parse JSON string into object
+      actual_JSON = JSON.parse(response);
+      console.log(actual_JSON); 
+    });
+    console.log(actual_JSON);
+    /*
+    window.onload = function() {
+        Formio.icons = 'fontawesome';
+        Formio.createForm(document.getElementById('formio'), 'http://127.0.0.1:5000/tramite');
+      };
+      */
+    </script>
+  </head>
+  <body>
+    <h2>Formularios de tramites</h2>
+<button onclick="myFunction()">Click me</button>
+    {
+  <div style="width:600px; margin-left:100px;">
+    <div id="formio"></div>
+  </div>
+  }
+<script type="text/javascript">
+  
+function myFunction() {
+Formio.icons = 'fontawesome';
+Formio.createForm(document.getElementById('formio'), 'http://10.0.8.171:5000/tramite');}
+</script>
+  </body>
+</html>
